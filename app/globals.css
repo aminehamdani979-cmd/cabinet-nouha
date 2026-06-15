@@ -9,8 +9,10 @@
   --color-charcoal: #2b2724;
 }
 
-* {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

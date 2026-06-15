@@ -45,8 +45,10 @@ export function About() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-luxury">
               <img
-                 src="/nouha-about.jpg"
+                src="/nouha-about.jpg"
                 alt="Nouha, fondatrice du Cabinet Nouha à Dakhla"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover object-top"
               />
             </div>

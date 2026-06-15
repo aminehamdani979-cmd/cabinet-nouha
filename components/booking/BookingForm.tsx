@@ -131,38 +131,46 @@ export function BookingForm({ selectedDate, selectedSlot, onSuccess }: BookingFo
       </h3>
 
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <Field label="Prénom" error={fieldErrors.firstName}>
+        <Field label="Prénom" error={fieldErrors.firstName} htmlFor="cn-first-name">
           <input
+            id="cn-first-name"
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="Votre prénom"
             className={inputClasses(!!fieldErrors.firstName)}
+            aria-describedby={fieldErrors.firstName ? "cn-first-name-error" : undefined}
           />
         </Field>
 
-        <Field label="Nom" error={fieldErrors.lastName}>
+        <Field label="Nom" error={fieldErrors.lastName} htmlFor="cn-last-name">
           <input
+            id="cn-last-name"
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Votre nom"
             className={inputClasses(!!fieldErrors.lastName)}
+            aria-describedby={fieldErrors.lastName ? "cn-last-name-error" : undefined}
           />
         </Field>
 
-        <Field label="Téléphone" error={fieldErrors.phone} className="sm:col-span-2">
+        <Field label="Téléphone" error={fieldErrors.phone} className="sm:col-span-2" htmlFor="cn-phone">
           <input
+            id="cn-phone"
             type="tel"
+            inputMode="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="06 XX XX XX XX"
             className={inputClasses(!!fieldErrors.phone)}
+            aria-describedby={fieldErrors.phone ? "cn-phone-error" : undefined}
           />
         </Field>
 
-        <Field label="Service" className="sm:col-span-2">
+        <Field label="Service" className="sm:col-span-2" htmlFor="cn-service">
           <select
+            id="cn-service"
             value={service}
             onChange={(e) => setService(e.target.value)}
             className={inputClasses(false)}
@@ -175,8 +183,9 @@ export function BookingForm({ selectedDate, selectedSlot, onSuccess }: BookingFo
           </select>
         </Field>
 
-        <Field label="Notes (optionnel)" className="sm:col-span-2">
+        <Field label="Notes (optionnel)" className="sm:col-span-2" htmlFor="cn-notes">
           <textarea
+            id="cn-notes"
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Informations complémentaires, demandes particulières..."
@@ -248,20 +257,26 @@ function Field({
   label,
   error,
   className,
+  htmlFor,
   children,
 }: {
   label: string;
   error?: string;
   className?: string;
+  htmlFor: string;
   children: React.ReactNode;
 }) {
   return (
     <div className={className}>
-      <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-charcoal-muted">
+      <label htmlFor={htmlFor} className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-charcoal-muted">
         {label}
       </label>
       {children}
-      {error && <p className="mt-1.5 text-xs text-red-600">{error}</p>}
+      {error && (
+        <p id={`${htmlFor}-error`} className="mt-1.5 text-xs text-red-600">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

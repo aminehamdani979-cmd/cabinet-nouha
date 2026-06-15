@@ -228,7 +228,7 @@ export function BookingCalendar({
                   Aucun créneau disponible pour cette date.
                 </p>
               ) : (
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
                   {slotsForSelectedDate.map((slot) => {
                     const isSelected = selectedSlot?.id === slot.id;
                     return (
@@ -237,14 +237,14 @@ export function BookingCalendar({
                         type="button"
                         onClick={() => onSelectSlot(slot)}
                         className={cn(
-                          "flex items-center justify-center gap-2 rounded-lg border px-3 py-3 text-sm font-medium transition-all duration-200",
+                          "flex min-h-[48px] items-center justify-center gap-1.5 rounded-lg border px-2 py-3 text-sm font-medium transition-all duration-200 sm:gap-2 sm:px-3",
                           isSelected
                             ? "border-champagne bg-champagne text-charcoal shadow-gold"
                             : "border-champagne/25 text-charcoal hover:border-champagne hover:bg-champagne/10"
                         )}
                       >
-                        <Clock className="h-3.5 w-3.5" />
-                        {formatTime(slot.slot_time)}
+                        <Clock className="h-3.5 w-3.5 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{formatTime(slot.slot_time)}</span>
                       </button>
                     );
                   })}

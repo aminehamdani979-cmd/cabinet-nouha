@@ -18,18 +18,18 @@ export function Hero() {
   className="relative flex min-h-screen items-center overflow-hidden"
 >
      {/* Background Image */}
-<div className="absolute inset-0 z-0">
-  <img
-    src="/cabinet-bg.jpg"
-    alt=""
-     className="h-full w-full object-cover opacity-60"
-  />
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/cabinet-bg.jpg"
+          alt=""
+          className="h-full w-full object-cover opacity-60"
+        />
 
-  <div className="absolute inset-0 bg-ivory/60" />
+        <div className="absolute inset-0 bg-ivory/60" />
 
-  <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-champagne/10 blur-3xl" />
-  <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-champagne/10 blur-3xl" />
-</div>
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-champagne/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-champagne/10 blur-3xl" />
+      </div>
 
       <div className="relative z-20 mx-auto grid w-full max-w-7xl  grid-cols-1 items-center gap-12 px-6 pt-32 pb-20 lg:grid-cols-2 lg:px-12 lg:pt-24">
         {/* Text content */}
