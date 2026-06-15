@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #faf7f2;
+  --color-champagne: #c9a876;
+  --color-beige: #e8ddd0;
+  --color-charcoal: #2b2724;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+/* Gold gradient text utility */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c9a876 0%, #dcc6a0 50%, #c9a876 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Elegant divider */
+.luxury-divider {
+  position: relative;
+  width: 60px;
+  height: 1px;
+  background: #c9a876;
+}
+
+.luxury-divider::before,
+.luxury-divider::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c9a876;
+}
+
+.luxury-divider::before {
+  left: -3px;
+}
+
+.luxury-divider::after {
+  right: -3px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a876;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b08f5e;
+}
+
+/* Focus visibility for accessibility */
+:focus-visible {
+  outline: 2px solid #c9a876;
+  outline-offset: 2px;
+}
