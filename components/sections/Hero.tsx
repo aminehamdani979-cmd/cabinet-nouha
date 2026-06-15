@@ -20,10 +20,12 @@ export function Hero() {
      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/cabinet-bg.jpg"
-          alt=""
-          className="h-full w-full object-cover opacity-60"
-        />
+  src="/cabinet-bg.webp"
+  alt=""
+  fetchPriority="high"
+  decoding="async"
+  className="h-full w-full object-cover opacity-60"
+/>
 
         <div className="absolute inset-0 bg-ivory/60" />
 
@@ -87,10 +89,13 @@ export function Hero() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-luxury">
             <img
-              src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1200&auto=format&fit=crop"
-              alt="Soin esthétique de luxe au Cabinet Nouha à Dakhla"
-              className="h-full w-full object-cover"
-            />
+  src="/nouha-hero.webp"
+  alt="Soin esthétique de luxe au Cabinet Nouha à Dakhla"
+  loading="eager"
+  decoding="async"
+  fetchPriority="high"
+  className="h-full w-full object-cover"
+/>
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 via-transparent to-transparent" />
           </div>
 
