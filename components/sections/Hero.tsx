@@ -46,7 +46,9 @@ export function Hero() {
           <h1 className="font-display text-4xl font-semibold leading-[1.1] text-charcoal sm:text-5xl lg:text-6xl">
             L&apos;Art de la Beauté,
             <br />
-            <span className="text-gold-gradient">Redéfini à Dakhla</span>
+            <span className="text-gold-gradient bg-ivory/70 backdrop-blur-sm rounded-xl px-3 py-1 inline-block">
+  Redéfini à Dakhla
+</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal-muted md:text-lg">
