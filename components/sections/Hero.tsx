@@ -34,10 +34,9 @@ export function Hero() {
       <div className="relative z-20 mx-auto grid w-full max-w-7xl  grid-cols-1 items-center gap-12 px-6 pt-32 pb-20 lg:grid-cols-2 lg:px-12 lg:pt-24">
         {/* Text content */}
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+  initial={false}
+  animate={{ opacity: 1, y: 0 }}
+>
           <Badge icon={Award} variant="outline" className="mb-6">
             Certifiée PHIBROWS Academy — USA
           </Badge>
@@ -97,11 +96,10 @@ export function Hero() {
 
           {/* Floating badge card */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="absolute -bottom-6 -left-6 rounded-2xl bg-ivory p-5 shadow-luxury md:-left-10 md:p-6"
-          >
+  initial={false}
+  animate={{ opacity: 1, scale: 1 }}
+  className="relative"
+>
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-champagne/15">
                 <Award className="h-6 w-6 text-champagne-dark" />
