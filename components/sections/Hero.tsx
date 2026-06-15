@@ -22,7 +22,7 @@ export function Hero() {
   <img
     src="/cabinet-bg.jpg"
     alt=""
-     className="h-full w-full object-cover opacity -60"
+     className="h-full w-full object-cover opacity-60"
   />
 
   <div className="absolute inset-0 bg-ivory/60" />
